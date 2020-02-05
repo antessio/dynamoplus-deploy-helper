@@ -9,7 +9,7 @@ if [[ -z "${ROOT_PASSWORD}" ]]; then
 else
   DYNAMOPLUS_ROOT_PASSWORD="${ROOT_PASSWORD}"
 fi
-echo "root password: $DYNAMOPLUS_ROOT_PASSWORD"
+#echo "root password: $DYNAMOPLUS_ROOT_PASSWORD"
 if [[ -z "${SERVICE_NAME}" ]]; then
   
   DYNAMOPLUS_SERVICE_NAME="dynamoplus-test-$(python /app/scripts/random_string.py)"

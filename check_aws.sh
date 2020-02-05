@@ -7,3 +7,8 @@ if [[ -z "${AWS_SECRET_ACCESS_KEY}" ]]; then
     echo "Missing aws secret"
     exit 1
 fi
+
+if [[ -z "${AWS_DEFAULT_REGION}" ]]; then
+    echo "Missing aws region"
+    exit 1
+fi

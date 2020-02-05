@@ -11,3 +11,5 @@ pip install jsonschema
 pip freeze > requirements.txt
 echo "installing node dependencies"
 npm install
+cp secrets-example.json secrets.json
+cat secrets.json | jq

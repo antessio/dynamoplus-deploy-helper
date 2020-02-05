@@ -23,8 +23,7 @@ RUN nodejs --version
 RUN serverless --version
 ADD ./scripts /app/scripts
 
-#ADD ./dynamoplus /app/dynamoplus
 RUN chmod -R 777 /app/*
 RUN /app/scripts/init.sh
-RUN /app/scripts/setup.sh
+
 WORKDIR /app
