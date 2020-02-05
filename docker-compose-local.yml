@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+    dynamolocal:
+        image: cnadiminti/dynamodb-local:latest
+        ports:
+            - 8000:8000
+        volumes:
+            - ./dynamodb-docker-data:/dynamodb_local_db
+        network_mode: host
+
+    dynamoplus-local:
+        image: dynamoplus-serverless
+        environment: 
+            AWS_ACCESS_KEY_ID: foo
+            AWS_SECRET_ACCESS_KEY: bar
+            ROOT_PASSWORD: 12345
+            SERVICE_NAME: e2e-tests
+        ports:
+            - 3000:3000
+        entrypoint: '/app/scripts/run-localhost.sh'
+        network_mode: host
