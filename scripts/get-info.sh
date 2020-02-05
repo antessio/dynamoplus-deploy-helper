@@ -1,5 +1,5 @@
 #!/bin/bash
-cd dynamoplus/serverless
+cd /app/dynamoplus/serverless
 sls info > /tmp/info
 info=/tmp/info
 stage=$(cat $info | sed -n -e 's/^stage: \(.*\)/\1/p' )

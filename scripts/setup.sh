@@ -22,3 +22,12 @@ echo "service name: $DYNAMOPLUS_SERVICE_NAME"
 sed "s/passwordtochangeinproduction/$DYNAMOPLUS_ROOT_PASSWORD/g" secrets-example.json > secrets.json
 sed -i "s/service: dynamoplus/service: $DYNAMOPLUS_SERVICE_NAME/g" serverless.yml
 sed -i 's/dockerizePip: true/dockerizePip: false/g' serverless.yml
+
+echo "-----------"
+echo "secrets"
+
+cat secrets.json
+
+echo "-----------"
+echo "serverless"
+cat serverless.yml
