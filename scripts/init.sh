@@ -6,9 +6,8 @@ cd dynamoplus
 git checkout develop
 cd serverless
 echo "installing python dependencies"
-pip install boto3
-pip install jsonschema
-pip freeze > requirements.txt
+pip install -r requirements.txt
+#pip freeze > requirements.txt
 echo "installing node dependencies"
 npm install
 cp secrets-example.json secrets.json

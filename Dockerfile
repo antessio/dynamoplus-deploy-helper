@@ -11,7 +11,7 @@ RUN apt-get install -y npm nodejs
 RUN apt-get install -y vim git tree jq
 
 # install aws-cli
-RUN pip install awscli
+#RUN pip install awscli
 
 # install serverless framework
 RUN npm install -g serverless
