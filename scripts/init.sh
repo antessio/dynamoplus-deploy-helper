@@ -3,7 +3,7 @@ cd /app
 echo "Downloading dynamolpus"
 git clone https://github.com/antessio/dynamoplus.git dynamoplus
 cd dynamoplus
-git checkout develop
+git checkout feature/admin-apis
 cd serverless
 echo "installing python dependencies"
 pip install -r requirements.txt

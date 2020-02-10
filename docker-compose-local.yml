@@ -7,16 +7,16 @@ services:
             - 8000:8000
         volumes:
             - ./dynamodb-docker-data:/dynamodb_local_db
-        network_mode: host
-
+ 
     dynamoplus-local:
         image: dynamoplus-serverless
         environment: 
             AWS_ACCESS_KEY_ID: foo
             AWS_SECRET_ACCESS_KEY: bar
+            DYNAMODB_HOST: dynamolocal
+            DYNAMODB_PORT: 8000
             ROOT_PASSWORD: 12345
             SERVICE_NAME: e2e-tests
         ports:
             - 3000:3000
         entrypoint: '/app/scripts/run-localhost.sh'
-        network_mode: host
