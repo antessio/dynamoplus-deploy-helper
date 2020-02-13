@@ -8,6 +8,14 @@
 
 This will download dynamoplus and build the docker image. 
 
+
+
+## Running on localhost with dynamolocal
+```bash
+docker-compose -f docker-compose-local -d
+
+```
+
 ## Deploy AWS
 ```bash
 # setting AWS credentials
