@@ -13,7 +13,7 @@ services:
         environment: 
             AWS_ACCESS_KEY_ID: foo
             AWS_SECRET_ACCESS_KEY: bar
-            DYNAMODB_HOST: dynamolocal
+            DYNAMODB_HOST: http://dynamolocal
             DYNAMODB_PORT: 8000
             ROOT_PASSWORD: 12345
             SERVICE_NAME: e2e-tests
