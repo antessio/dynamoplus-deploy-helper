@@ -1,6 +1,7 @@
 FROM python:3.7
 
-ARG branch_name=master
+ARG branch_name=${SOURCE_BRANCH}
+RUN echo "Running the build on ${branch_name} from ${SOURCE_BRANCH}"
 
 
 # update apt-get
