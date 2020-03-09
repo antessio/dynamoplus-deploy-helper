@@ -1,9 +1,10 @@
 #!/bin/bash
+branch_name=$1
 cd /app
 echo "Downloading dynamolpus"
 git clone https://github.com/antessio/dynamoplus.git dynamoplus
 cd dynamoplus
-git checkout develop
+git checkout $branch_name
 cd serverless
 echo "installing python dependencies"
 pip install -r requirements.txt

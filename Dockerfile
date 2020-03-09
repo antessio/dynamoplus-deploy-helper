@@ -1,5 +1,7 @@
 FROM python:3.7
 
+ARG branch_name=master
+
 
 # update apt-get
 RUN apt-get update -y && apt-get upgrade -y
@@ -24,6 +26,6 @@ RUN serverless --version
 ADD ./scripts /app/scripts
 
 RUN chmod -R 777 /app/*
-RUN /app/scripts/init.sh
+RUN /app/scripts/init.sh ${branch_name}
 
 WORKDIR /app
